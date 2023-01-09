@@ -4,11 +4,14 @@
 <body>
 
     <form action="show.php">
-        what is you name:<input type="text" name="name">.<br>
-        what is yot age:<input type="text" name="age">.<br>
-        <input type="radio" name="gender" value="female">Female
-        <input type="radio" name="gender" value="male">Male
-        <input type="radio" name="gender" value="other">Other<br>
+        ชื่อของคุณ:<input type="text" name="name">.<br>
+        อายุของคุณ:<input type="text" name="age">.<br>
+        เพศของคุณ:
+        <input type="radio" name="gender" value="female">ผู้หญิง
+        <input type="radio" name="gender" value="male">ผู้ชาย<br>
+        สถานะของคุณ:
+        <input type="radio" name="status" value="single">โสด
+        <input type="radio" name="status" value="marry">แต่งงานแล้ว<br>
         <input type="submit" value="Submit"><br>
 
     </form>
