@@ -8,7 +8,7 @@
 
     echo "Name:".$name."<br>";
     echo "Age:".$age."<br>";
-    echo ""
+    echo "1"
     ?>
 </body>
 
