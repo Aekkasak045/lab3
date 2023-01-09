@@ -35,6 +35,10 @@
         $titaltxt="นาง";
         $gender = "เพศหญิง";
         $status="แต่งงานแล้ว";
+    }else if($age < "15" && $gender == "female" && $status == "married"){
+        $titaltxt="ดญ.";
+        $gender = "เพศหญิง";
+        $status="แต่งงานแล้ว";
     }
 
     echo "ชื่อ:".$titaltxt.$name."<br>";
