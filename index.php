@@ -10,7 +10,7 @@
         <input type="radio" name="gender" value="female">ผู้หญิง
         <input type="radio" name="gender" value="male">ผู้ชาย<br>
         สถานะของคุณ:
-        <input type="radio" name="status" value="single">โสด
+        <input type="radio" name="status" value="unmarried">ยังไม่ได้แต่งงาน
         <input type="radio" name="status" value="married">แต่งงานแล้ว<br>
         <input type="submit" value="Submit"><br>
 

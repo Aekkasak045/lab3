@@ -7,14 +7,14 @@
     $age=$_GET["age"];
     $gender=$_GET["gender"];
     $status=$_GET["status"];
-    if ($age < "15" && $gender == "male" && $status == "single"){
+    if ($age < "15" && $gender == "male" && $status == "unmarried"){
         $titaltxt="ดช.";
         $gender = "เพศชาย";
-        $status="โสด";
-    }else if($age > "14" && $gender == "male" && $status == "single"){
+        $status="ยังไม่ได้แต่งงาน";
+    }else if($age > "14" && $gender == "male" && $status == "unmarried"){
         $titaltxt="นาย";
         $gender = "เพศชาย";
-        $status="โสด";
+        $status="ยังไม่ได้แต่งงาน";
     }else if($age > "14" && $gender == "male" && $status == "married"){
         $titaltxt="นาย";
         $gender = "เพศชาย";
@@ -23,14 +23,14 @@
         $titaltxt="ดช.";
         $gender = "เพศชาย";
         $status="แต่งงานแล้ว";
-    }else if($age < "15" && $gender == "female" && $status == "single"){
+    }else if($age < "15" && $gender == "female" && $status == "unmarried"){
         $titaltxt="ดญ.";
         $gender = "เพศหญิง";
-        $status="โสด";
-    }else if($age > "14" && $gender == "female" && $status == "single"){
+        $status="ยังไม่ได้แต่งงาน";
+    }else if($age > "14" && $gender == "female" && $status == "unmarried"){
         $titaltxt="นางสาว";
         $gender = "เพศหญิง";
-        $status="โสด";
+        $status="ยังไม่ได้แต่งงาน";
     }else if($age > "14" && $gender == "female" && $status == "married"){
         $titaltxt="นาง";
         $gender = "เพศหญิง";
