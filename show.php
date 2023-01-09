@@ -40,7 +40,7 @@
         $gender = "เพศหญิง";
         $status="แต่งงานแล้ว";
     }
-
+    echo "<font style='font-size:24px'>ข้อมูลของคุณ</font>"."<br>";
     echo "ชื่อ:".$titaltxt.$name."<br>";
     echo "อายุ:".$age."<br>";
     echo "เพศ:".$gender."<br>";
