@@ -19,6 +19,10 @@
         $titaltxt="นาย";
         $gender = "เพศชาย";
         $status="แต่งงานแล้ว";
+    }else if($age < "15" && $gender == "male"&& $status == "married"){
+        $titaltxt="ดช.";
+        $gender = "เพศชาย";
+        $status="แต่งงานแล้ว";
     }else if($age < "15" && $gender == "female"&& $status == "single"){
         $titaltxt="ดญ.";
         $gender = "เพศหญิง";
