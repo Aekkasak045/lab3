@@ -1,22 +1,36 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
+require ("Connect.php");
+$sql = "SELECT ID, FName, LName , Age, Sex, MarryStatus FROM survey";
+$result = $conn->query($sql);
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
-// Create database
-$sql = "CREATE DATABASE myDB";
-if ($conn->query($sql) === TRUE) {
-  echo "Database created successfully";
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    if($row["Sex"] == "M"){
+        if($row["Age"]>=15){
+            echo "ID: " . $row["ID"]. " - Name:นาย" . $row["FName"]. " " . $row["LName"]. "<br>";
+        }else{
+            echo "ID: " . $row["ID"]. " - Name:ดช." . $row["FName"]. " " . $row["LName"]. "<br>";
+        }
+    }
+    else{
+        if($row["Age"]>=15){
+            if($row["MarryStatus"]=="N"){
+                echo "ID: " . $row["ID"]. " - Name:นางสาว" . $row["FName"]. " " . $row["LName"]. "<br>";
+            }
+            else{
+                echo "ID: " . $row["ID"]. " - Name:นาง" . $row["FName"]. " " . $row["LName"]. "<br>";
+            }
+
+        }else{
+            echo "ID: " . $row["ID"]. " - Name:ดญ." . $row["FName"]. " " . $row["LName"]. "<br>";
+        }
+    }
+  }
 } else {
-  echo "Error creating database: " . $conn->error;
+  echo "0 results";
 }
-
 $conn->close();
 ?>
