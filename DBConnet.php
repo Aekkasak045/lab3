@@ -10,14 +10,14 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     if($row["Sex"] == "M"){
         if($row["Age"]>=15){
-            echo "ID: " . $row["ID"]. " - Name:นาย" . $row["FName"]. " " . $row["LName"]. "<br>";
+            echo "ID: " . $row["ID"]. " - Name:นาย" . $row["FName"]. " " . $row["LName"]. "<a href='editpeople.php?id=".$row["ID"]."'> Edit</a><br>";
         }else{
-            echo "ID: " . $row["ID"]. " - Name:ดช." . $row["FName"]. " " . $row["LName"]. "<br>";
+            echo "ID: " . $row["ID"]. " - Name:ดช." . $row["FName"]. " " . $row["LName"]."<a href='editpeople.php?id=".$row["ID"]."'> Edit</a><br>";
         }
     }
     else{
         if($row["Age"]>=15){
-            if($row["MarryStatus"]=="N"){
+            if($row["MarryStatus"]=="S"){
                 echo "ID: " . $row["ID"]. " - Name:นางสาว" . $row["FName"]. " " . $row["LName"]. "<br>";
             }
             else{
