@@ -3,8 +3,6 @@ require ("Connect.php");
 $sql = "SELECT ID, FName, LName , Age, Sex, MarryStatus FROM survey";
 $result = $conn->query($sql);
 
-
-
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
