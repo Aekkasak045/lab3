@@ -6,6 +6,7 @@ $fname=$_POST["FName"];
 $lname=$_POST["LName"];
 $sex=$_POST["Sex"];
 $marry_status=$_POST["MarryStatus"];
+$age=$_POST["Age"];
 
 echo "fname:$fname lname:$lname age:$age sex:$sex marry_status:$marry_status";
 $sql="UPDATE survey set FName='$fname',Lname='$lname',Age='$age',Sex='$sex',MarryStatus='$marry_status' WHERE ID=$id";

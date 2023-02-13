@@ -13,7 +13,7 @@ if($result->num_rows > 0){
     <input type="hidden" name="ID" value="<?php print($row["ID"])?>">
     First Name:<input type="text" name="FName" value="<?php print($row["FName"]); ?>"><br>
     Last Name:<input type="text" name="LName" value="<?php print($row["LName"]); ?>"><br>
-    Age:<input type="text" name="age" value="<?php print($row["Age"]); ?>"><br>
+    Age:<input type="text" name="Age" value="<?php print($row["Age"]); ?>"><br>
     Sex:<select name="Sex">
             <option value="M" <?php if($row["Sex"]=="M") print("selected");?>>Male</option>
             <option value="F" <?php if($row["Sex"]=="F") print("selected");?>>Female</option>
