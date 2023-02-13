@@ -16,14 +16,14 @@ if ($result->num_rows > 0) {
     else{
         if($row["Age"]>=15){
             if($row["MarryStatus"]=="S"){
-                echo "ID: " . $row["ID"]. " - Name:นางสาว" . $row["FName"]. " " . $row["LName"]. "<br>";
+                echo "ID: " . $row["ID"]. " - Name:นางสาว" . $row["FName"]. " " . $row["LName"]. "<a href='editpeople.php?id=".$row["ID"]."'> Edit</a><br>";
             }
             else{
-                echo "ID: " . $row["ID"]. " - Name:นาง" . $row["FName"]. " " . $row["LName"]. "<br>";
+                echo "ID: " . $row["ID"]. " - Name:นาง" . $row["FName"]. " " . $row["LName"]. "<a href='editpeople.php?id=".$row["ID"]."'> Edit</a><br>";
             }
 
         }else{
-            echo "ID: " . $row["ID"]. " - Name:ดญ." . $row["FName"]. " " . $row["LName"]. "<br>";
+            echo "ID: " . $row["ID"]. " - Name:ดญ." . $row["FName"]. " " . $row["LName"]. "<a href='editpeople.php?id=".$row["ID"]."'> Edit</a><br>";
         }
     }
   }
