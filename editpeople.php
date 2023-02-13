@@ -16,7 +16,7 @@ if($result->num_rows > 0){
     Age:<input type="text" name="age" value="<?php print($row["Age"]); ?>"><br>
     Sex:<select name="Sex">
             <option value="M" <?php if($row["Sex"]=="M") print("selected");?>>Male</option>
-            <option value="F" <?php if($row["sex"]=="F") print("selected");?>>Female</option>
+            <option value="F" <?php if($row["Sex"]=="F") print("selected");?>>Female</option>
         </select><br>
     Marry Status:<select name="MarryStatus">
             <option value="S" <?php if($row["MarryStatus"]=="S") print("selected");?>>Single</option>
