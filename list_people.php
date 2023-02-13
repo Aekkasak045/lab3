@@ -32,3 +32,5 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
+<br>
+<a href="add_people.php">Add People</a>
