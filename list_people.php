@@ -1,10 +1,28 @@
 <?php
+require("Connect.php");
+
+if(isset($_GET["keyword"])){
+    $keyword=$_GET["keyword"];
+}else{
+    $keyword="";
+}
+
+if($keyword!=""){
+    $sql = "SELECT ID, FName, LName , Age, Sex, MarryStatus FROM survey WHERE FName LIKE '%$keyword%' OR LName LIKE '%$keyword%'";
+}else{
+    $sql = "SELECT ID, FName, LName , Age, Sex, MarryStatus FROM survey";
+}
+?>
+<form action="list_people.php" method="get">
+    Search:<input type="text" name="keyword" value="<?php print($keyword);?>">
+    <input type="submit" value="Search">
+</form><br>
+<?php
 require ("Connect.php");
-$sql = "SELECT ID, FName, LName , Age, Sex, MarryStatus FROM survey";
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // output data of each row
   while($row = $result->fetch_assoc()) {
     if($row["Sex"] == "M"){
         if($row["Age"]>=15){
